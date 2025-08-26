@@ -187,25 +187,7 @@ A aplicação inclui séries de exemplo para demonstrar o funcionamento:
    - Produtora: Netflix
    - Categoria: Ficção Científica
    - Assistida em: 20/08/2023
-
-## 🎯 Imagens e Demonstração
-
-### Screenshots do Projeto:
-
-**Página Inicial:**
-![Página inicial com apresentação do projeto e estatísticas dinâmicas]
-
-**Formulário de Cadastro:**
-![Formulário completo com todos os campos obrigatórios e validação]
-
-**Listagem de Séries:**
-![Cards das séries com opções de busca, filtro, edição e exclusão]
-
-**Design Responsivo:**
-![Adaptação perfeita para dispositivos móveis e tablets]
-
-*Nota: As imagens estão sendo exibidas na aplicação em execução. Execute o projeto para visualizar a interface completa.*
-
+   
 ## 📝 Decisões de Desenvolvimento
 
 ### **Escolhas Técnicas Justificadas:**

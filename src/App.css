@@ -13,7 +13,7 @@
 
 .main-content {
   flex: 1;
-  padding-top: 80px; /* Para compensar a navbar fixa */
+  padding-top: 80px;
 }
 
 .page-container {
@@ -26,7 +26,6 @@
   justify-content: center;
 }
 
-/* Hero Section - Página Inicial */
 .hero-section {
   text-align: center;
   padding: 2rem 0;
@@ -144,7 +143,6 @@
   margin: 0;
 }
 
-/* About Section */
 .about-section {
   max-width: 800px;
   margin: 0 auto;
@@ -197,7 +195,6 @@
   transform: translateY(-2px);
 }
 
-/* Responsivo Melhorado */
 @media (max-width: 1024px) {
   .page-container {
     padding: 1.5rem;

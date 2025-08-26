@@ -95,7 +95,6 @@ input, select, textarea {
   font-size: inherit;
 }
 
-/* Scrollbar personalizada */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -113,7 +112,6 @@ input, select, textarea {
   background: #a8a8a8;
 }
 
-/* Responsividade global */
 @media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -126,7 +124,6 @@ input, select, textarea {
   }
 }
 
-/* Utilitários responsivos */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -139,13 +136,11 @@ input, select, textarea {
   border: 0;
 }
 
-/* Loading estados */
 .loading {
   opacity: 0.6;
   pointer-events: none;
 }
 
-/* Animações suaves */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -92,7 +92,6 @@ function App() {
     </div>
   );
 
-  // Página Sobre
   const AboutPage = () => (
     <div className="page-container">
       <div className="about-section">
@@ -131,7 +130,6 @@ function App() {
     </div>
   );
 
-  // Página de Cadastro
   const CadastroPage = () => (
     <div className="page-container">
       <SerieForm 
@@ -142,7 +140,6 @@ function App() {
     </div>
   );
 
-  // Página de Listagem
   const ListagemPage = () => (
     <div className="page-container">
       <SerieList 
