@@ -1,241 +1,300 @@
-# Pedro Barros - Projeto Fase 1
+# SeriesManager - Projeto Fase 2
 
-## 📋 Descrição do Projeto
+> Aplicação web para gerenciamento de séries assistidas desenvolvida em React com Material-UI
 
-O **SeriesManager** é uma aplicação web desenvolvida em React que permite aos usuários gerenciar suas séries assistidas de forma organizada e eficiente. Este projeto atende completamente aos requisitos da **Fase 1**, implementando todas as funcionalidades solicitadas no enunciado.
+## 🚀 Funcionalidades
 
-## 🚀 Como Executar o Projeto
+- ✅ **Página Inicial**: Dashboard com estatísticas e visão geral
+- ✅ **Página Sobre**: Informações do projeto e tecnologias utilizadas
+- ✅ **Cadastro de Séries**: Formulário completo com validação
+- ✅ **Listagem de Séries**: Visualização com busca e filtros avançados
+- ✅ **Edição e Exclusão**: Operações CRUD completas
+- ✅ **Interface Responsiva**: Design adaptável com Material-UI
+- ✅ **Consumo de API REST**: Integração com backend
+- ✅ **Testes Unitários**: Cobertura completa dos componentes
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+- **React** 19.1.1 - Biblioteca para interfaces de usuário
+- **Material-UI** 6.1.8 - Biblioteca de componentes
+- **React Router** 7.8.2 - Roteamento de páginas
+- **Axios** 1.7.9 - Cliente HTTP para API
+- **Day.js** - Manipulação de datas
+- **Date Pickers** - Seletores de data avançados
+
+### Desenvolvimento
+- **Vite** 7.1.2 - Build tool e servidor de desenvolvimento
+- **Vitest** 3.2.4 - Framework de testes
+- **Testing Library** - Utilitários para testes
+- **ESLint** - Linter para qualidade de código
+
+## 📦 Instalação e Execução
 
 ### Pré-requisitos
 - Node.js (versão 16 ou superior)
 - npm ou yarn
+- Git
 
-### Passos para execução:
+### 🔧 SOLUÇÃO PARA ERRO HTTP 403
 
-1. **Extraia o arquivo pedro-barros-projeto-fase-1.zip**
-2. **Navegue até a pasta do projeto:**
-   ```bash
-   cd pedro-barros-projeto-fase-1
-   ```
-3. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
-4. **Execute o projeto em modo de desenvolvimento:**
-   ```bash
-   npm run dev
-   ```
-5. **Acesse a aplicação:**
-   - Abra seu navegador e acesse: `http://localhost:5173/`
+Se você está recebendo o erro "Access to localhost was denied - HTTP ERROR 403", isso significa que a API não está rodando. Siga os passos abaixo:
 
-### Scripts Disponíveis:
-- `npm run dev` - Executa o projeto em modo de desenvolvimento
-- `npm run build` - Gera a build de produção
-- `npm run preview` - Visualiza a build de produção
-- `npm run lint` - Executa o linter ESLint
-
-### Como Executar Testes:
-Atualmente o projeto não possui testes implementados. Esta funcionalidade será adicionada em fases futuras do projeto.
-
-## 🎯 Requisitos da Fase 1 - Cumprimento Completo
-
-### ✅ Requisitos Obrigatórios Atendidos:
-
-1. **✅ Projeto React criado:** Utilizado **Vite** como ferramenta de criação e desenvolvimento
-2. **✅ Componentes de entrada de dados:** Formulário completo implementado no **SerieForm**
-3. **✅ Validação básica e feedbacks visuais:** Validação em tempo real com mensagens de erro
-4. **✅ Funcionalidades dinâmicas CRUD estático:** Listagem, busca, criação, atualização e exclusão
-5. **✅ Componentização obrigatória:** **SerieList**, **SerieForm** e **NavBar** implementados
-6. **✅ Estrutura de pastas:** Organização conforme especificado no enunciado
-
-### ✅ Estrutura de Projeto Conforme Solicitado:
-
-```
-pedro-barros-projeto-fase-1/
-├── README.md                    # Esta documentação
-├── package.json                 # Dependências e scripts
-├── index.html                   # HTML principal
-├── vite.config.js              # Configuração do Vite
-├── eslint.config.js            # Configuração do ESLint
-├── public/                      # Arquivos públicos
-│   └── vite.svg
-└── src/                         # Código fonte principal
-    ├── App.jsx                  # Componente principal com roteamento
-    ├── App.css                  # Estilos globais
-    ├── main.jsx                 # Ponto de entrada da aplicação
-    ├── index.css                # Estilos base
-    ├── assets/
-    │   └── react.svg
-    └── components/              # Pasta de componentes
-        ├── NavBar/              # Componente de navegação
-        │   ├── NavBar.jsx
-        │   └── NavBar.css
-        ├── SerieForm/           # Componente de formulário
-        │   ├── SerieForm.jsx
-        │   └── SerieForm.css
-        └── SerieList/           # Componente de listagem
-            ├── SerieList.jsx
-            └── SerieList.css
+#### Opção 1: Script Automatizado (Recomendado)
+```bash
+# No diretório do projeto frontend
+cd /Users/pedrobarros/Documents/www/pedro-barros-projeto-fase-1
+./setup-api.sh
 ```
 
-## 🧩 Componentes Obrigatórios - Descrição Detalhada
+#### Opção 2: Configuração Manual
+```bash
+# 1. Clone o repositório da API (se ainda não fez)
+cd /Users/pedrobarros/Documents/www
+git clone https://github.com/adsPucrsOnline/DesenvolvimentoFrontend.git
 
-### **NavBar** (Componente de Navegação)
-**Função:** Componente de navegação principal que permite acesso a todas as seções da aplicação.
+# 2. Entre no diretório da API
+cd DesenvolvimentoFrontend/readingJournal-api/
 
-**O que realiza:**
-- Fornece links para navegação entre páginas (Início, Sobre, Cadastrar Série, Listar Séries)
-- Mantém layout fixo no topo da página
-- Adapta-se responsivamente a diferentes tamanhos de tela
-- Utiliza React Router DOM para navegação SPA (Single Page Application)
+# 3. Instale as dependências
+npm install
 
-### **SerieForm** (Componente de Formulário)
-**Função:** Componente responsável pelo cadastro e edição de séries.
+# 4. Inicie a API
+npm start
+```
 
-**O que realiza:**
-- **Campos obrigatórios implementados:**
-  - Título da série
-  - Número de Temporadas
-  - Data de Lançamento da Temporada
-  - Diretor
-  - Produtora
-  - Categoria (seleção via dropdown)
-  - Data em que assistiu
-- **Validação completa:** Todos os campos são validados em tempo real
-- **Feedback visual:** Bordas vermelhas e mensagens de erro para campos inválidos
-- **Modo dual:** Funciona para criação de novas séries e edição de existentes
-- **Props recebidas:** `onSubmit`, `editingSerie`, `onCancel`
+### ✅ Verificação da API
+Após iniciar a API, você deve ver uma mensagem similar a:
+```
+Server running on port 5000
+```
 
-### **SerieList** (Componente de Listagem)
-**Função:** Componente que exibe e gerencia a lista de séries cadastradas.
+Teste se está funcionando acessando: http://localhost:5000/series
 
-**O que realiza:**
-- **Recebe lista via props:** Aceita array de séries como propriedade
-- **Exibição em cards:** Layout visual atrativo com todas as informações da série
-- **Funcionalidade de busca:** Permite buscar por título, diretor ou produtora
-- **Filtro por categoria:** Dropdown para filtrar séries por categoria
-- **Ações de gerenciamento:** Botões para editar e excluir cada série
-- **Contador dinâmico:** Mostra total de séries encontradas
-- **Estado vazio:** Exibe mensagem quando não há séries cadastradas
-- **Props recebidas:** `series`, `onEdit`, `onDelete`
+### 🌐 Executando o Frontend
 
-## 📱 Páginas Implementadas (Conforme Sugestão do Enunciado)
+Em um **novo terminal**, execute:
+```bash
+cd /Users/pedrobarros/Documents/www/pedro-barros-projeto-fase-1
+npm run dev
+```
 
-### 1. **Página Inicial** (/)
-- Página de recepção ao usuário conforme solicitado
-- Apresentação do projeto com cards informativos
-- Estatísticas dinâmicas das séries cadastradas
+O projeto estará disponível em `http://localhost:5173`
 
-### 2. **Página Informativa - "Sobre"** (/sobre)
-- Página informativa sobre o projeto
-- Descrição das tecnologias utilizadas
+### 1. Clone o projeto
+```bash
+git clone <url-do-repositorio>
+cd pedro-barros-projeto-fase-2
+```
+
+### 2. Instale as dependências
+```bash
+npm install
+```
+
+### 3. Configure a API
+Certifique-se de que a API está rodando em `http://localhost:5000`:
+
+```bash
+# Em outro terminal, clone e execute a API
+git clone https://github.com/adsPucrsOnline/DesenvolvimentoFrontend.git
+cd DesenvolvimentoFrontend/readingJournal-api/
+npm install
+npm start
+```
+
+### 4. Execute o projeto
+```bash
+npm run dev
+```
+
+O projeto estará disponível em `http://localhost:5173`
+
+## 🧪 Executando os Testes
+
+### Testes unitários
+```bash
+npm run test
+```
+
+### Testes em modo watch
+```bash
+npm run test:ui
+```
+
+### Executar testes uma vez
+```bash
+npm run test:run
+```
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/           # Componentes React
+│   ├── __tests__/       # Testes dos componentes
+│   ├── AboutPage/       # Página sobre
+│   ├── HomePage/        # Página inicial
+│   ├── NavBar/          # Barra de navegação
+│   ├── SerieForm/       # Formulário de séries
+│   └── SerieList/       # Lista de séries
+├── services/            # Serviços de API
+│   ├── __tests__/       # Testes dos serviços
+│   └── seriesService.js # Serviço da API REST
+├── test/                # Configuração de testes
+├── App.jsx              # Componente principal
+├── theme.js             # Tema Material-UI
+└── main.jsx             # Ponto de entrada
+```
+
+## 🎯 Descrição dos Componentes
+
+### HomePage
+- Dashboard principal com estatísticas
+- Preview das séries recentes
+- Links para navegação rápida
+- Cards informativos sobre funcionalidades
+
+### AboutPage
+- Informações detalhadas do projeto
+- Lista de tecnologias utilizadas
+- Arquitetura da aplicação
 - Informações do desenvolvedor
 
-### 3. **Página de Cadastro** (/cadastrar)
-- Contém o formulário de inclusão de novas séries
-- Implementa todos os campos obrigatórios especificados
-- Validação completa conforme requisitos
+### SerieForm
+- Formulário para cadastro/edição de séries
+- Validação completa dos campos
+- Date pickers para datas
+- Estados de loading e erro
+- Integração com API
 
-### 4. **Página de Listagem** (/series)
-- Lista séries cadastradas com todas as informações
-- Possibilidade de exclusão e edição através de botões
-- Funcionalidades de busca e filtro implementadas
+### SerieList
+- Listagem responsiva das séries
+- Sistema de busca por título, diretor ou produtora
+- Filtros por categoria
+- Botões de edição e exclusão
+- Dialog de confirmação para exclusão
+- Estados vazios informativos
 
-## 🎨 Funcionalidades Dinâmicas Implementadas
+### NavBar
+- Navegação responsiva
+- Menu mobile para telas pequenas
+- Indicação da página ativa
+- Design consistente com Material-UI
 
-### **Operações CRUD Estáticas:**
-- **✅ CREATE:** Adição de novas séries através do formulário
-- **✅ READ:** Listagem e visualização de séries cadastradas
-- **✅ UPDATE:** Edição de séries existentes (pré-preenchimento do formulário)
-- **✅ DELETE:** Exclusão de séries com confirmação do usuário
+### seriesService
+- Abstração da API REST
+- Métodos para todas as operações CRUD
+- Tratamento de erros
+- Interceptors para requisições
 
-### **Funcionalidades de Busca e Filtro:**
-- **✅ Busca dinâmica:** Por título, diretor ou produtora
-- **✅ Filtro por categoria:** Dropdown com todas as categorias disponíveis
-- **✅ Contagem dinâmica:** Total de séries exibidas após filtros
+## 🔧 Funcionalidades da API
 
-### **Validação e Feedback:**
-- **✅ Validação em tempo real:** Campos validados ao perder o foco (onBlur)
-- **✅ Feedback visual:** Bordas coloridas e mensagens de erro
-- **✅ Confirmações:** Dialog de confirmação antes de excluir séries
+O projeto consome as seguintes rotas da API:
 
-## 🛠️ Tecnologias Utilizadas
+- `GET /series` - Listar todas as séries
+- `GET /series/:id` - Buscar série por ID
+- `POST /series` - Criar nova série
+- `PUT /series` - Atualizar série existente
+- `DELETE /series/:id` - Remover série
 
-- **React** 19.1.1 - Biblioteca JavaScript para interfaces de usuário
-- **React Router DOM** 7.8.2 - Roteamento para aplicações React SPA
-- **Vite** 7.1.2 - Ferramenta de build rápida e moderna (alternativa ao Create React App)
-- **CSS3** - Estilização com design responsivo e moderno
-- **JavaScript ES6+** - Linguagem de programação com recursos modernos
-- **ESLint** - Linter para qualidade de código
+### Estrutura de dados da série:
+```json
+{
+  "id": 1,
+  "titulo": "Breaking Bad",
+  "numeroTemporadas": 5,
+  "dataLancamento": "2008-01-20",
+  "diretor": "Vince Gilligan",
+  "produtora": "Sony Pictures",
+  "categoria": "Drama",
+  "dataAssistida": "2023-06-15"
+}
+```
 
-## 📊 Dados Pré-cadastrados para Demonstração
+## 🎨 Interface e UX
 
-A aplicação inclui séries de exemplo para demonstrar o funcionamento:
+### Características do Design
+- **Material Design**: Interface moderna e intuitiva
+- **Responsividade**: Adaptável a dispositivos móveis e desktop
+- **Acessibilidade**: Componentes acessíveis por padrão
+- **Feedback Visual**: Loading states, alertas e confirmações
+- **Navegação Fluida**: Transições suaves entre páginas
 
-1. **Breaking Bad**
-   - Temporadas: 5
-   - Lançamento: 20/01/2008
-   - Diretor: Vince Gilligan
-   - Produtora: Sony Pictures
-   - Categoria: Drama
-   - Assistida em: 15/06/2023
+### Paleta de Cores
+- **Primária**: Azul (#1976d2)
+- **Secundária**: Rosa (#dc004e)
+- **Sucesso**: Verde para ações positivas
+- **Erro**: Vermelho para alertas e exclusões
+- **Background**: Tons de cinza claro
 
-2. **Stranger Things**
-   - Temporadas: 4
-   - Lançamento: 15/07/2016
-   - Diretor: The Duffer Brothers
-   - Produtora: Netflix
-   - Categoria: Ficção Científica
-   - Assistida em: 20/08/2023
-   
-## 📝 Decisões de Desenvolvimento
+## 🧪 Cobertura de Testes
 
-### **Escolhas Técnicas Justificadas:**
+### Componentes Testados
+- ✅ **HomePage**: Renderização, navegação e estatísticas
+- ✅ **SerieForm**: Validação, submissão e estados
+- ✅ **SerieList**: Listagem, filtros e ações
+- ✅ **seriesService**: Todas as operações da API
 
-1. **Vite ao invés de Create React App:** 
-   - Desenvolvimento mais rápido com Hot Module Replacement otimizado
-   - Build de produção mais eficiente
-   - Configuração mais simples e moderna
+### Tipos de Teste
+- **Unitários**: Componentes isolados
+- **Integração**: Interação entre componentes
+- **Mock**: Simulação de APIs e navegação
 
-2. **Estrutura de componentes em pastas separadas:**
-   - Organização conforme especificado no enunciado
-   - Facilita manutenção e escalabilidade
-   - CSS isolado por componente
+## 📱 Demonstração
 
-3. **Estado local com useState:**
-   - Implementação estática conforme requisitos da Fase 1
-   - Preparação para integração futura com APIs
-   - Gerenciamento simples e efetivo
+### Telas Principais
 
-4. **Validação no cliente:**
-   - Feedback imediato ao usuário
-   - Melhor experiência de uso
-   - Validação robusta de todos os campos obrigatórios
+1. **Página Inicial**
+   - Dashboard com estatísticas
+   - Cards de funcionalidades
+   - Preview das séries
 
-5. **Design responsivo completo:**
-   - Funciona perfeitamente em todos os dispositivos
-   - Interface moderna e profissional
-   - Usabilidade otimizada para mobile e desktop
+2. **Cadastro de Série**
+   - Formulário completo
+   - Validação em tempo real
+   - Date pickers
 
-## 👨‍💻 Informações do Desenvolvedor
+3. **Lista de Séries**
+   - Grid responsivo
+   - Busca e filtros
+   - Ações de edição/exclusão
 
-**Nome:** Pedro Barros  
-**Projeto:** Fase 1 - Gerenciador de Séries  
-**Data de Entrega:** Agosto 2025  
-**Tecnologia Principal:** React com Vite
+4. **Página Sobre**
+   - Informações do projeto
+   - Tecnologias utilizadas
+   - Créditos do desenvolvedor
+
+## 👨‍💻 Desenvolvedor
+
+**Pedro Barros**  
+Projeto Fase 2 - Desenvolvimento Frontend  
+PUCRS Online - 2025
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos como parte do curso de Desenvolvimento Frontend.
 
 ---
 
-## 📋 Checklist de Entrega - Fase 1
+## 🚨 Troubleshooting
 
-- ✅ Projeto React funcional criado
-- ✅ Todos os componentes obrigatórios implementados (SerieList, SerieForm, NavBar)
-- ✅ Estrutura de pastas conforme especificação
-- ✅ Formulário com todos os campos obrigatórios
-- ✅ Validação e feedback visual implementados
-- ✅ Funcionalidades CRUD estáticas funcionando
-- ✅ Páginas sugeridas criadas (inicial, sobre, cadastro, listagem)
-- ✅ Interface responsiva e profissional
-- ✅ README.md completo com instruções
-- ✅ Projeto zipado sem node_modules
-- ✅ Nome do arquivo: pedro-barros-projeto-fase-1.zip
+### Problemas Comuns
+
+1. **API não conecta**
+   - Verifique se a API está rodando em `http://localhost:5000`
+   - Confirme se as dependências da API foram instaladas
+
+2. **Testes falhando**
+   - Execute `npm install` novamente
+   - Verifique se todas as dependências de teste estão instaladas
+
+3. **Build falha**
+   - Limpe o cache: `npm cache clean --force`
+   - Reinstale dependências: `rm -rf node_modules && npm install`
+
+4. **Date Picker não funciona**
+   - Verifique se o LocalizationProvider está configurado
+   - Confirme a importação do AdapterDayjs
+
+Para mais ajuda, consulte a documentação das tecnologias utilizadas ou entre em contato com o desenvolvedor.
